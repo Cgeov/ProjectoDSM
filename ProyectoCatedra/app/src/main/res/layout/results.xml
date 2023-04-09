@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="699dp"
+        android:layout_height="576dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shape" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="583dp"
+        android:layout_height="487dp"
+        android:rotationX="180"
+        android:rotationY="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/shape" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="298dp">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="409dp"
+            android:layout_height="672dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|center_horizontal"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="391dp"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/top_buttons">
+
+                    <LinearLayout
+                        android:layout_width="334dp"
+                        android:layout_height="214dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Salario Base:"
+                            android:inputType="none"
+                            android:enabled="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName3"
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/input_results"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:inputType="none"
+                            android:enabled="false"
+                            android:paddingStart="20dp"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Tipo de salario:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName4"
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/input_results"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:inputType="none"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Tiempo en la empresa"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName5"
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:background="@drawable/input_results"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:inputType="none"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="393dp"
+                    android:layout_height="349dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/top_buttons">
+
+                    <LinearLayout
+                        android:layout_width="333dp"
+                        android:layout_height="305dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="ISSS:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName6"
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/input_results"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:paddingStart="20dp"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="AFP:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName7"
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/input_results"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:paddingStart="20dp"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Renta:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName8"
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/input_results"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:paddingStart="20dp"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Descuento Total:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName9"
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/input_last_result"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:enabled="false"
+                            android:inputType="none"
+                            android:paddingStart="20dp"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="393dp"
+                    android:layout_height="73dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="194dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bottom_card_results"
+                        android:gravity="center|center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Salario Neto:"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_color_secondary"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textView20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_color_secondary"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_card_results_two"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Aguinaldo:"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_color_secondary"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textColor="@color/background_color_secondary"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="249dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="Datos:"
+                android:textColor="@color/background_color_secondary"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/btnViewRecords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_historial" />
+
+            <ImageView
+                android:id="@+id/btnAddMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_add" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

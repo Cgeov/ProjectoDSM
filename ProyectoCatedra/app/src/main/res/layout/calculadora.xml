@@ -32,7 +32,7 @@
             app:srcCompat="@drawable/user_profile" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/txtBienvenida"
             android:layout_width="199dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -92,7 +92,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/edtSalario"
             android:layout_width="379dp"
             android:layout_height="51dp"
             android:layout_marginTop="40dp"
@@ -102,7 +102,8 @@
             android:fontFamily="@font/poppins"
             android:hint="Salario Base"
             android:inputType="number"
-            android:focusable="false"
+            android:focusable="true"
+            android:enabled= "true"
             android:paddingStart="30dp"
             android:textColor="@color/white"
             android:textColorHint="#40FFFFFF"
@@ -122,7 +123,7 @@
             android:background="@drawable/spinner_calculadora"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/edtSalario" />
 
         <Spinner
             android:id="@+id/spinnerAños"

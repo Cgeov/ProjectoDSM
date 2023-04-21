@@ -72,7 +72,7 @@
                             android:textSize="16sp" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName3"
+                            android:id="@+id/salarioB"
                             android:layout_width="match_parent"
                             android:layout_height="37dp"
                             android:layout_marginBottom="10dp"
@@ -95,7 +95,7 @@
                             android:textSize="16sp" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName4"
+                            android:id="@+id/tipoSal"
                             android:layout_width="match_parent"
                             android:layout_height="37dp"
                             android:layout_marginBottom="10dp"
@@ -116,7 +116,7 @@
                             android:textSize="16sp" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName5"
+                            android:id="@+id/tiempo"
                             android:layout_width="match_parent"
                             android:layout_height="37dp"
                             android:background="@drawable/input_results"
@@ -155,7 +155,7 @@
                             android:textSize="16sp" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName6"
+                            android:id="@+id/isss"
                             android:layout_width="match_parent"
                             android:layout_height="37dp"
                             android:layout_marginBottom="10dp"
@@ -177,7 +177,7 @@
                             android:textSize="16sp" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName7"
+                            android:id="@+id/afp"
                             android:layout_width="match_parent"
                             android:layout_height="37dp"
                             android:layout_marginBottom="10dp"
@@ -199,7 +199,7 @@
                             android:textSize="16sp" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName8"
+                            android:id="@+id/renta"
                             android:layout_width="match_parent"
                             android:layout_height="37dp"
                             android:layout_marginBottom="10dp"
@@ -221,7 +221,7 @@
                             android:textSize="16sp" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName9"
+                            android:id="@+id/descT"
                             android:layout_width="match_parent"
                             android:layout_height="37dp"
                             android:layout_marginBottom="10dp"
@@ -262,7 +262,7 @@
                             android:textSize="20sp" />
 
                         <TextView
-                            android:id="@+id/textView20"
+                            android:id="@+id/salNeto"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_bold"
@@ -289,7 +289,7 @@
                             android:textSize="20sp" />
 
                         <TextView
-                            android:id="@+id/textView21"
+                            android:id="@+id/aguinaldo"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_bold"

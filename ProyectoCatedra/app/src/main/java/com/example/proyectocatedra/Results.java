@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.proyectocatedra.db.DbRegistros;
+
 public class Results extends AppCompatActivity {
 
     EditText salarioB;
@@ -49,19 +51,36 @@ public class Results extends AppCompatActivity {
         salNeto = findViewById(R.id.salNeto);
         aguinaldo = findViewById(R.id.aguinaldo);
 
+
+        //Recibiendo datos de pantalla "Calculadora" con bundle
         Bundle recept = getIntent().getExtras();
+        //Verificando que el bundle no esté vacío
         if(recept != null){
+            //Recibiendo los datos
             String area = recept.getString("Area");
             String tipo = recept.getString("tipo");
             String año = recept.getString("años");
             Integer meses = recept.getInt("meses");
             Double salario = recept.getDouble("Salario");
+            String name = recept.getString("name");
 
             salarioB.setText("$"+salario.toString());
             tipoSal.setText(tipo);
             tiempo.setText(año);
+            //Llamado las funciones para realizar calculos
             CalcularDesc(salario);
             CalcularAguinald(año,salario,meses);
+            //Instanciando la clase DbRegistros para llamar al metodo insertar
+            DbRegistros dbRegistros = new DbRegistros(Results.this);
+            long id = dbRegistros.InsertReg(name,area,tipo,salarioB.getText().toString(),descT.getText().toString(),
+                    aguinaldo.getText().toString(),salNeto.getText().toString());
+            //validando que se insertó un registro
+            if(id > 0){
+                Toast.makeText(Results.this, "Registro insertado con éxito", Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(Results.this, "Ha ocurrido un error", Toast.LENGTH_SHORT).show();
+            }
         }
         else{
             Toast.makeText(this, "Vacio", Toast.LENGTH_LONG);

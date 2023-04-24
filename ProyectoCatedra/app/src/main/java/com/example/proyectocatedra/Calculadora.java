@@ -48,14 +48,7 @@ public class Calculadora extends AppCompatActivity {
         EditText salario = findViewById(R.id.edtSalario);
         TextView bienvenida = findViewById(R.id.txtBienvenida);
 
-        if(spinnerAños.toString().equals("Menos de 1 año")){
-            spinnerMeses.setEnabled(false);
-            spinnerMeses.setFocusable(false);
-            spinnerMeses.setBackgroundColor(Color.GREEN);
-        }
-        else{
-            spinnerMeses.setEnabled(true);
-        }
+
 
         spinnerArea.setAdapter(spinnerDataArea);
         spinnerTipoSalario.setAdapter(spinnerTypeSalary);
@@ -88,6 +81,7 @@ public class Calculadora extends AppCompatActivity {
                     datos.putString("años", años);
                     datos.putInt("meses", meses);
                     datos.putDouble("Salario", Double.parseDouble(salario.getText().toString()));
+                    datos.putString("name", personName);
 
                     Intent intent = new Intent(Calculadora.this, Results.class);
                     intent.putExtras(datos);

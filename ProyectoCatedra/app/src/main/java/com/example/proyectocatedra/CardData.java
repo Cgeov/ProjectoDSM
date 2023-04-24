@@ -1,25 +1,40 @@
 package com.example.proyectocatedra;
 
 public class CardData {
-    private double netSalary;
-    private double deductions;
-    private double baseSalary;
+    private int id;
+    private String netSalary;
+    private String deductions;
+    private String baseSalary;
 
-    public CardData(double netSalary, double deductions, double baseSalary) {
-        this.netSalary = netSalary;
-        this.deductions = deductions;
-        this.baseSalary = baseSalary;
+    public CardData() {
     }
 
-    public double getNetSalary() {
+    public void setnetSalary(String netSalary) {
+        this.netSalary = netSalary;
+    }
+    public void setdeductions(String deductions) {
+        this.deductions = deductions;
+    }
+    public void setbaseSalary(String baseSalary) {
+        this.baseSalary = baseSalary;
+    }
+    public String getNetSalary() {
         return netSalary;
     }
 
-    public double getDeductions() {
+    public String getDeductions() {
         return deductions;
     }
 
-    public double getBaseSalary() {
+    public String getBaseSalary() {
         return baseSalary;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

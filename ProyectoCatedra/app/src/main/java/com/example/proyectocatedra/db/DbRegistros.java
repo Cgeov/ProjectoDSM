@@ -2,9 +2,14 @@ package com.example.proyectocatedra.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
+
+import com.example.proyectocatedra.CardData;
+
+import java.util.ArrayList;
 
 public class DbRegistros extends DatabaseHelper{
 
@@ -50,5 +55,34 @@ public class DbRegistros extends DatabaseHelper{
         }
 
         return id;
+    }
+
+    public ArrayList<CardData> showReg(){
+
+        DatabaseHelper dbHelper = new DatabaseHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+
+        ArrayList<CardData> listaRegistros = new ArrayList<>();
+        CardData registro = null;
+        Cursor cursorRegistros = null;
+
+        cursorRegistros = db.rawQuery("SELECT id, salario_neto,deducciones,salario_base FROM "+ TABLE_REGISTROS +" ORDER BY id", null);
+
+        if (cursorRegistros.moveToFirst()){
+            do{
+                registro = new CardData();
+                registro.setId(cursorRegistros.getInt(0));
+                registro.setnetSalary(cursorRegistros.getString(1));
+                registro.setdeductions(cursorRegistros.getString(2));
+                registro.setbaseSalary(cursorRegistros.getString(3));
+
+                listaRegistros.add(registro);
+            } while(cursorRegistros.moveToNext());
+        }
+
+        cursorRegistros.close();
+        return listaRegistros;
+
     }
 }

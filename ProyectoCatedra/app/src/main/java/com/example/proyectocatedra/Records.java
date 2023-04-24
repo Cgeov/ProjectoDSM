@@ -9,31 +9,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.proyectocatedra.db.DbRegistros;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Records extends AppCompatActivity {
+
+    ArrayList<CardData> listRegist;
+    RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.records);
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        CardData card1 = new CardData( 2000.00, 500.00, 2500.00);
-        CardData card2 = new CardData( 3000.00, 600.00, 3600.00);
-        CardData card3 = new CardData( 4000.00, 800.00, 4800.00);
-        CardData card4 = new CardData( 4000.00, 800.00, 4800.00);
-        CardData card5 = new CardData( 4000.00, 800.00, 4800.00);
-        CardData card6 = new CardData( 4000.00, 800.00, 4800.00);
-        List<CardData> cardDataList = new ArrayList<>();
-        cardDataList.add(card1);
-        cardDataList.add(card2);
-        cardDataList.add(card3);
-        cardDataList.add(card4);
-        cardDataList.add(card5);
-        cardDataList.add(card6);
-        CardAdapter cardAdapter = new CardAdapter(cardDataList);
+        recyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
+        listRegist = new ArrayList<>();
+
+        DbRegistros dbRegistros = new DbRegistros(Records.this);
+
+        CardAdapter cardAdapter = new CardAdapter(dbRegistros.showReg());
         recyclerView.setAdapter(cardAdapter);
 
 

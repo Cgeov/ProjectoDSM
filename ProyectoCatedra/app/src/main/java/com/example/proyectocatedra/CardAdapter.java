@@ -26,9 +26,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         CardData cardData = cardDataList.get(position);
-        holder.netSalaryTextView.setText("$ " + cardData.getNetSalary());
-        holder.deductionsTextView.setText("$ " + cardData.getDeductions());
-        holder.baseSalaryTextView.setText("$ " + cardData.getBaseSalary());
+        holder.netSalaryTextView.setText(cardData.getNetSalary());
+        holder.deductionsTextView.setText(cardData.getDeductions());
+        holder.baseSalaryTextView.setText(cardData.getBaseSalary());
     }
 
     @Override
@@ -37,9 +37,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView netSalaryTextView;
-        public TextView deductionsTextView;
-        public TextView baseSalaryTextView;
+        TextView netSalaryTextView,deductionsTextView,baseSalaryTextView;
 
         public ViewHolder(View itemView) {
             super(itemView);

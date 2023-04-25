@@ -128,7 +128,7 @@ public class Results extends AppCompatActivity {
             afp = salario*0.0725;
             preRent = salario - isss - afp;
             excedente = preRent - 895.24;
-            renta = (excedente * 0.1) + 60;
+            renta = (excedente * 0.2) + 60;
             totalDesc = isss + afp + renta;
             sueldoneto = salario - totalDesc;
         }
@@ -137,7 +137,7 @@ public class Results extends AppCompatActivity {
             afp = salario*0.0725;
             preRent = salario - isss - afp;
             excedente = preRent - 2038.10;
-            renta = (excedente * 0.1) + 288.57;
+            renta = (excedente * 0.3) + 288.57;
             totalDesc = isss + afp + renta;
             sueldoneto = salario - totalDesc;
         }

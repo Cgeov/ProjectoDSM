@@ -101,7 +101,7 @@
             android:ems="10"
             android:fontFamily="@font/poppins"
             android:hint="Salario Base"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:focusable="true"
             android:enabled= "true"
             android:paddingStart="30dp"

@@ -22,7 +22,7 @@ public class Calculadora extends AppCompatActivity {
         setContentView(R.layout.calculadora);
 
         String[] dataArea = new String[] {
-                "Salud", "Informatica", "etc", "etc", "etc", "etc", "etc"
+                "Salud", "Informatica", "Agricultura", "Educación", "Recursos Humanos", "Marketing", "Contabilidad"
         };
         Integer[] dataMonths = new Integer[] {
                 1,2,3,4,5,6,7,8,9,10,11,12

@@ -54,6 +54,7 @@ public class DbRegistros extends DatabaseHelper{
             ex.toString();
         }
 
+
         return id;
     }
 
@@ -84,5 +85,81 @@ public class DbRegistros extends DatabaseHelper{
         cursorRegistros.close();
         return listaRegistros;
 
+    }
+
+    public CardData seeReg(int id){
+
+        DatabaseHelper dbHelper = new DatabaseHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        CardData registro = null;
+        Cursor cursorRegistros = null;
+
+        cursorRegistros = db.rawQuery("SELECT*FROM "+ TABLE_REGISTROS +" WHERE id = " + id + " LIMIT 1", null);
+
+        if (cursorRegistros.moveToFirst()){
+
+                registro = new CardData();
+                registro.setId(cursorRegistros.getInt(0));
+                registro.setNombre(cursorRegistros.getString(1));
+                registro.setArea(cursorRegistros.getString(2));
+                registro.setTipo(cursorRegistros.getString(3));
+                registro.setBaseSalary(cursorRegistros.getString(4));
+        }
+
+        cursorRegistros.close();
+        return registro;
+    }
+
+    public boolean UpdateReg(int id, String nombre, String area, String tipo, String salB, String deducciones, String aguinaldo, String slNeto){
+        //Instanciando la variable ID para poder retornarla
+        boolean right = false;
+
+        //Instanciando la clase DatabaseHelper e instanciando SQLiteDatabase para
+        //Que permita insertar datos en una tabla especifica
+        DatabaseHelper dbHelper = new DatabaseHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        try{
+            db.execSQL("UPDATE " + TABLE_REGISTROS + " SET nombre = '" + nombre + "', area = '" + area + "'," +
+                    "tipo = '" + tipo + "', salario_base = '" + salB + "', deducciones = '" + deducciones + "'," +
+                    "aguinaldo = '" + aguinaldo + "', salario_neto = '" + slNeto + "' WHERE id = '" + id + "' ");
+
+            right = true;
+
+        }
+        catch (Exception ex){
+            ex.toString();
+            right = false;
+        }
+        finally {
+            db.close();
+        }
+
+        return right;
+    }
+
+    public boolean DeleteReg(int id){
+        //Instanciando la variable ID para poder retornarla
+        boolean right = false;
+
+        //Instanciando la clase DatabaseHelper e instanciando SQLiteDatabase para
+        //Que permita insertar datos en una tabla especifica
+        DatabaseHelper dbHelper = new DatabaseHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        try{
+            db.execSQL("DELETE FROM " + TABLE_REGISTROS + " WHERE id = '" + id + "'");
+
+            right = true;
+
+        }
+        catch (Exception ex){
+            ex.toString();
+            right = false;
+        }
+        finally {
+            db.close();
+        }
+
+        return right;
     }
 }

@@ -1,5 +1,7 @@
 package com.example.proyectocatedra;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,19 +9,19 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
-    private List<CardData> cardDataList;
+    private ArrayList<CardData> cardDataList;
 
-    public CardAdapter(List<CardData> cardDataList) {
+    public CardAdapter(ArrayList<CardData> cardDataList) {
         this.cardDataList = cardDataList;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_record, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_record, null, false);
         return new ViewHolder(view);
     }
 
@@ -36,7 +38,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
         return cardDataList.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView netSalaryTextView,deductionsTextView,baseSalaryTextView;
 
         public ViewHolder(View itemView) {
@@ -44,6 +46,16 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
             netSalaryTextView = itemView.findViewById(R.id.txtCardNetSalary);
             deductionsTextView = itemView.findViewById(R.id.txtCardDeductions);
             baseSalaryTextView = itemView.findViewById(R.id.txtCardBaseSalary);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Context context = v.getContext();
+                    Intent intent = new Intent(context, ViewData.class);
+                    intent.putExtra("id", cardDataList.get(getAdapterPosition()).getId());
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }
